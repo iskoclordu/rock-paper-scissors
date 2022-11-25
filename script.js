@@ -7,4 +7,5 @@ let array=[
 function getComputerChoice(){
     return array[Math.floor(Math.random()*array.length)];
 }
-getComputerChoice();
+let computerChoice= getComputerChoice();
+console.log(computerChoice);
