@@ -71,12 +71,12 @@ function singleRound(playerSelection,computerSelection){
 
 function game(){
     for (let i=1; i<6; i++){
-        if (i) {
+       
         let computerSelection= getComputerChoice();
         let playerSelection=prompt("Choose your weapon!Rock, Paper or Scissors?");
         console.log(singleRound(playerSelection,computerSelection));
         console.log(`Round ${i}`);
-        }
+        
     }
 }
 
