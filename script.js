@@ -13,7 +13,7 @@ let playerSelection=prompt("Choose your weapon!Rock, Paper or Scissors?");
 
 function singleRound(playerSelection,computerSelection){
     if (playerSelection.toLowerCase()=='rock'&&computerSelection=='Rock'){
-        let message='No Winner! It\'s a draw';
+        let message='No Winner! It\'s a tie';
         return `You choose ${playerSelection}. Computer choose ${computerSelection}.\n${message}`;
     }
 
@@ -36,7 +36,7 @@ function singleRound(playerSelection,computerSelection){
     }
 
     else if (playerSelection.toLowerCase()=='paper'&&computerSelection=='Paper') {
-        let message='No Winner! It\'s a draw';
+        let message='No Winner! It\'s a tie';
         return `You choose ${playerSelection}. Computer choose ${computerSelection}.\n${message}`;
     }
 
@@ -59,7 +59,7 @@ function singleRound(playerSelection,computerSelection){
     }
 
     else if (playerSelection.toLowerCase()=='scissors'&&computerSelection=='Scissors') {
-        let message='No Winner! It\'s a draw';
+        let message='No Winner! It\'s a tie';
         return `You choose ${playerSelection}. Computer choose ${computerSelection}. \n${message}`;
     }
     
