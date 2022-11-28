@@ -7,60 +7,59 @@ let array=[
 function getComputerChoice(){
     return array[Math.floor(Math.random()*array.length)];
 }
-let computerSelection= getComputerChoice();
 
-let playerSelection=prompt("Choose your weapon!Rock, Paper or Scissors?");
-
-function singleRound(playerSelection,computerSelection){
-    if (playerSelection.toLowerCase()=='rock'&&computerSelection=='Rock'){
+function singleRound(){
+    let x= prompt("Choose your weapon!Rock, Paper or Scissors?");
+    let y= getComputerChoice();
+    if (x.toLowerCase()=='rock'&&y=='Rock'){
         let message='No Winner! It\'s a tie';
-        return `You choose ${playerSelection}. Computer choose ${computerSelection}.\n${message}`;
+        return `You choose ${x}. Computer choose ${y}.\n${message}`;
     }
 
-    else if (playerSelection.toLowerCase()=='rock'&&computerSelection=='Paper') {
+    else if (x.toLowerCase()=='rock'&&y=='Paper') {
         let message='You Lose! Paper beats Rock.';
-        return `You choose ${playerSelection}. Computer choose ${computerSelection}.\n${message}`;
+        return `You choose ${x}. Computer choose ${y}.\n${message}`;
     }
 
-    else if (playerSelection.toLowerCase()=='rock'&&computerSelection=='Scissors') {
+    else if (x.toLowerCase()=='rock'&&y=='Scissors') {
         let message='You Win! Rock beats Scissors.';
-        return `You choose ${playerSelection}. Computer choose ${computerSelection}.\n${message}`;
+        return `You choose ${x}. Computer choose ${y}.\n${message}`;
     }
 
 
 
 
-    else if (playerSelection.toLowerCase()=='paper'&&computerSelection=='Rock') {
+    else if (x.toLowerCase()=='paper'&&y=='Rock') {
         let message='You Win! Paper beats Rock.';
-        return `You choose ${playerSelection}. Computer choose ${computerSelection}.\n${message}`;
+        return `You choose ${x}. Computer choose ${y}.\n${message}`;
     }
 
-    else if (playerSelection.toLowerCase()=='paper'&&computerSelection=='Paper') {
+    else if (x.toLowerCase()=='paper'&&y=='Paper') {
         let message='No Winner! It\'s a tie';
-        return `You choose ${playerSelection}. Computer choose ${computerSelection}.\n${message}`;
+        return `You choose ${x}. Computer choose ${y}.\n${message}`;
     }
 
-    else if (playerSelection.toLowerCase()=='paper'&&computerSelection=='Scissors') {
+    else if (x.toLowerCase()=='paper'&&y=='Scissors') {
         let message='You Lose! Scissors beats Paper.';
-        return `You choose ${playerSelection}. Computer choose ${computerSelection}.\n${message}`;
+        return `You choose ${x}. Computer choose ${y}.\n${message}`;
     }
 
 
     
 
-    else if (playerSelection.toLowerCase()=='scissors'&&computerSelection=='Rock') {
+    else if (x.toLowerCase()=='scissors'&&y=='Rock') {
         let message='You Lose! Rock beats Scissors.';
-        return `You choose ${playerSelection}. Computer choose ${computerSelection}.\n${message}`;
+        return `You choose ${x}. Computer choose ${y}.\n${message}`;
     }
 
-    else if (playerSelection.toLowerCase()=='scissors'&&computerSelection=='Paper') {
+    else if (x.toLowerCase()=='scissors'&&y=='Paper') {
         let message='You Win! Scissors beats Paper.';
-        return `You choose ${playerSelection}. Computer choose ${computerSelection}.\n${message}`;
+        return `You choose ${x}. Computer choose ${y}.\n${message}`;
     }
 
-    else if (playerSelection.toLowerCase()=='scissors'&&computerSelection=='Scissors') {
+    else if (x.toLowerCase()=='scissors'&&y=='Scissors') {
         let message='No Winner! It\'s a tie';
-        return `You choose ${playerSelection}. Computer choose ${computerSelection}. \n${message}`;
+        return `You choose ${x}. Computer choose ${y}. \n${message}`;
     }
     
     else {
@@ -72,9 +71,7 @@ function singleRound(playerSelection,computerSelection){
 function game(){
     for (let i=1; i<6; i++){
        
-        let computerSelection= getComputerChoice();
-        let playerSelection=prompt("Choose your weapon!Rock, Paper or Scissors?");
-        console.log(singleRound(playerSelection,computerSelection));
+        console.log(singleRound());
         console.log(`Round ${i}`);
         
     }
