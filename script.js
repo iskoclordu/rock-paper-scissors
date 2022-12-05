@@ -35,17 +35,17 @@ function singleRound(x){
 
     else if (x.toLowerCase()=='paper'&&y=='Rock') {
         winner = 'Human';
-        return `You choose ${x}. Computer choose ${y}.\n${message}`;
+        return message=`You choose ${x}. Computer choose ${y}.\n${message}`;
     }
 
     else if (x.toLowerCase()=='paper'&&y=='Paper') {
         winner = 'Draw';
-        return `You choose ${x}. Computer choose ${y}.\n${message}`;
+        return message=`You choose ${x}. Computer choose ${y}.\n${message}`;
     }
 
     else if (x.toLowerCase()=='paper'&&y=='Scissors') {
         winner = 'Computer';
-        return `You choose ${x}. Computer choose ${y}.\n${message}`;
+        return message=`You choose ${x}. Computer choose ${y}.\n${message}`;
     }
 
 
@@ -53,17 +53,17 @@ function singleRound(x){
 
     else if (x.toLowerCase()=='scissors'&&y=='Rock') {
         winner = 'Computer';
-        return `You choose ${x}. Computer choose ${y}.\n${message}` ;
+        return message=`You choose ${x}. Computer choose ${y}.\n${message}` ;
     }
 
     else if (x.toLowerCase()=='scissors'&&y=='Paper') {
         winner = 'Human';
-        return `You choose ${x}. Computer choose ${y}.\n${message}`;
+        return message=`You choose ${x}. Computer choose ${y}.\n${message}`;
     }
 
     else if (x.toLowerCase()=='scissors'&&y=='Scissors') {
         winner = 'Draw';
-        return `You choose ${x}. Computer choose ${y}. \n${message}`;
+        return message=`You choose ${x}. Computer choose ${y}. \n${message}`;
     }
     
     else {
@@ -107,9 +107,11 @@ rock.addEventListener('click',function(){
     singleRound('rock');
     win.textContent = 'Winner is: ' + winner;
     result.textContent = message;
+    
 
         if (winner==='Human') {
             p += 1
+            
         }
 
         else if (winner==='Computer') {
@@ -119,6 +121,7 @@ rock.addEventListener('click',function(){
         else {}
   
         score.textContent=`Human: ${p} - Computer: ${c}`;
+        message='';
 
         if (p+c===5) {
 
@@ -143,6 +146,7 @@ paper.addEventListener('click',function(){
     singleRound('paper');
     win.textContent = 'Winner is: ' + winner;
     result.textContent = message;
+    
 
         if (winner==='Human') {
             p += 1
@@ -155,6 +159,7 @@ paper.addEventListener('click',function(){
         else {}
   
         score.textContent=`Human: ${p} - Computer: ${c}`;
+        message='';
 
         if (p+c===5) {
 
@@ -179,6 +184,7 @@ scissors.addEventListener('click',function(){
     singleRound('scissors');
     win.textContent = 'Winner is: ' + winner;
     result.textContent = message;
+    
 
         if (winner==='Human') {
             p += 1
@@ -191,6 +197,7 @@ scissors.addEventListener('click',function(){
         else {}
   
         score.textContent=`Human: ${p} - Computer: ${c}`;
+        message='';
 
         if (p+c===5) {
 
