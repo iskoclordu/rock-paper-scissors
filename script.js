@@ -71,15 +71,6 @@ function singleRound(x){
     }
 }
 
-function game(n){
-    for (let i=1; i<=n; i++){
-       
-        console.log(singleRound());
-        console.log(`Round ${i}`);
-        
-    }
-}
-
 const resultContainer=document.querySelector('.result');
 
 const result=document.createElement('div');
@@ -104,7 +95,7 @@ score.textContent= `Human: ${p} - Computer: ${c}`;
 
 const rock= document.querySelector('#rock');
 rock.addEventListener('click',function(){
-    singleRound('rock');
+    singleRound('Rock');
     win.textContent = 'Winner is: ' + winner;
     result.textContent = message;
     
@@ -143,7 +134,7 @@ rock.addEventListener('click',function(){
 
 const paper= document.querySelector('#paper');
 paper.addEventListener('click',function(){
-    singleRound('paper');
+    singleRound('Paper');
     win.textContent = 'Winner is: ' + winner;
     result.textContent = message;
     
@@ -181,7 +172,7 @@ paper.addEventListener('click',function(){
 
 const scissors= document.querySelector('#scissors');
 scissors.addEventListener('click',function(){
-    singleRound('scissors');
+    singleRound('Scissors');
     win.textContent = 'Winner is: ' + winner;
     result.textContent = message;
     
