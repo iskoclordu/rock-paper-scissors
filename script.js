@@ -35,17 +35,17 @@ function singleRound(x){
 
     else if (x.toLowerCase()=='paper'&&y=='Rock') {
         winner = 'Human';
-        return message=`You choose ${x}. Computer choose ${y}.\n${message}`;
+        return message=`You choose ${x}. Computer choose ${y}.`;
     }
 
     else if (x.toLowerCase()=='paper'&&y=='Paper') {
         winner = 'Draw';
-        return message=`You choose ${x}. Computer choose ${y}.\n${message}`;
+        return message=`You choose ${x}. Computer choose ${y}.`;
     }
 
     else if (x.toLowerCase()=='paper'&&y=='Scissors') {
         winner = 'Computer';
-        return message=`You choose ${x}. Computer choose ${y}.\n${message}`;
+        return message=`You choose ${x}. Computer choose ${y}.`;
     }
 
 
@@ -53,17 +53,17 @@ function singleRound(x){
 
     else if (x.toLowerCase()=='scissors'&&y=='Rock') {
         winner = 'Computer';
-        return message=`You choose ${x}. Computer choose ${y}.\n${message}` ;
+        return message=`You choose ${x}. Computer choose ${y}.` ;
     }
 
     else if (x.toLowerCase()=='scissors'&&y=='Paper') {
         winner = 'Human';
-        return message=`You choose ${x}. Computer choose ${y}.\n${message}`;
+        return message=`You choose ${x}. Computer choose ${y}.`;
     }
 
     else if (x.toLowerCase()=='scissors'&&y=='Scissors') {
         winner = 'Draw';
-        return message=`You choose ${x}. Computer choose ${y}. \n${message}`;
+        return message=`You choose ${x}. Computer choose ${y}.`;
     }
     
     else {
@@ -172,6 +172,7 @@ paper.addEventListener('click',function(){
 
 const scissors= document.querySelector('#scissors');
 scissors.addEventListener('click',function(){
+    console.log('scissors');
     singleRound('Scissors');
     win.textContent = 'Winner is: ' + winner;
     result.textContent = message;
