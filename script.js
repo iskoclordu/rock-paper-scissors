@@ -172,7 +172,6 @@ paper.addEventListener('click',function(){
 
 const scissors= document.querySelector('#scissors');
 scissors.addEventListener('click',function(){
-    console.log('scissors');
     singleRound('Scissors');
     win.textContent = 'Winner is: ' + winner;
     result.textContent = message;
